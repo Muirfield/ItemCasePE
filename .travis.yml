@@ -1,0 +1,20 @@
+language: php
+php:
+- '7.0'
+script:
+- bash test
+sudo: required
+dist: trusty
+before_deploy:
+- bash libcommon/mkpp -o . . --ysed='s/^depend:.*//' -l libcommon/src:mf/common=aliuly/itemcase/common
+deploy:
+  provider: releases
+  api_key:
+    secure: jtBCzdKB+uM11/zqQzHV34ZYWgbsyrJGPVrvl5Zp6HG48NRkEMn9oKIHTDGjkUnTqgTHKuBvf9IXgauq2neTLQ7NGhK3dSOy90Ucmn3wtVnInLG3uzCvdy5OJ3x2rgiDqnyH5jS/MgkZhJUXfj/RVJwxKutSQgTQA5nEIDDVK2A2OPkjj0ULjwNu0FGFspdP2/xdZF2gj7IUSP8PfzUv3XmYrnQxgsBFpWlR+Xqe2BUC/e7USQJJrfmWc9Td0EUW8yu67KLBAb1Hw9W16nlfmhMZZhNC64WX9Fns6Z7B17+POLBYxHQBT3Gps9fcIEQwjKy7snoJjmDegpBVGqZnlAK5gFoQVi1YyjM4nJF8qrTBRsNiapNOsMCZaFyq9+MAXBjk+8f1vNe5zK3PZdHMUwe3AgLSn/rx5jtiFgl3jGErWxdiXAxcAMvaEB0F4e/Ym9KWdfPrCsAblmIA9zG1XHg7x5zXDU61zo2mAaxmWyrTTEMUBKEchiaz8zFLNENDSs3NVjqa2h2eiEtHRP/vWfC1UcQ2/7J9H44VhVxdwVB0oxOtH1KUshLq27X97m5+SO6MiRdriz1O+e+CxLR+WiR31wf90+obXSWcCry0ZLHULkiMO4Cb1Z4dbodE1Y9L0wTQ75+oJf1rYTJJZ7fFR72YWZ2SzqbX05oczdaa4Vk=
+  file:
+  - ItemCasePE-lite_v*.phar
+  - ItemCasePE_v*.phar
+  file_glob: true
+  on:
+    tags: true
+    repo: Muirfield/ItemCasePE
