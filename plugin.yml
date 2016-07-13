@@ -1,11 +1,13 @@
 main: aliuly\itemcasepe\Main
-api: [1.10.0, 1.13.0]
+api: 2.0.0
 load: POSTWORLD
+depend: [ libcommon ]
 
 name: ItemCasePE
 description: An implementation of Bukkit's ItemCase
-version: 1.0.8
+version: 1.1.0
 author: aliuly
+website: http://github.com/Muirfield/ItemCasePE
 
 commands:
   itemcase:

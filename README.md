@@ -1,18 +1,45 @@
-<img src="https://raw.githubusercontent.com/alejandroliu/pocketmine-plugins/master/Media/ItemCase-icon.png" style="width:64px;height:64px" width="64" height="64"/>
+<!-- template: startup.md -->
 
-ItemCasePE
-=========
 
-* Summary: An implementation of Bukkit's ItemCase
-* Dependency Plugins: n/a
-* PocketMine-MP version: 1.4 - API 1.10.0, 1.6 - API 1.13.0
-* OptionalPlugins:
-* Categories: General
-* Plugin Access: Tile Entities, Items/Blocks
-* WebSite: [github](https://github.com/alejandroliu/pocketmine-plugins/tree/master/ItemCasePE)
+<!-- end-include -->
+<img id="ItemCase-icon.png" src="https://raw.githubusercontent.com/Muirfield/ItemCasePE/master/media/ItemCase-icon.png" style="width:64px;height:64px" width="64" height="64"/>
+<!-- template: header.md -->
 
-Overview
---------
+# ItemCasePE
+
+- Summary: An implementation of Bukkit's ItemCase
+- PocketMine-MP API version: 2.0.0
+- DependencyPlugins: libcommon
+- OptionalPlugins: 
+- Categories: N/A
+- WebSite: http://github.com/Muirfield/ItemCasePE
+
+
+<!-- end-include -->
+
+<!-- php: $v_forum_thread = "https://forums.pocketmine.net/threads/itemcasepe.8059/"; -->
+<!-- php: $copyright="2015, 2016"; -->
+<!-- template: old/prologue.md -->
+
+**DO NOT POST QUESTIONS/BUG-REPORTS/REQUESTS IN THE REVIEWS**
+
+It is difficult to carry a conversation in the reviews.  If you
+have a question/bug-report/request please use the
+[Thread](https://forums.pocketmine.net/threads/itemcasepe.8059/) for
+that.  You are more likely to get a response and help that way.
+
+_NOTE:_
+
+This documentation was last updated for version **1.1.0**.
+
+Please go to
+[github](http://github.com/Muirfield/ItemCasePE)
+for the most up-to-date documentation.
+
+You can also download this plugin from this [page](https://github.com/Muirfield/pocketmine-plugins/releases/tag/ItemCasePE-1.1.0).
+
+
+<!-- end-include -->
 
 A simplistic implementation of Bukkit's ItemCase.
 
@@ -25,9 +52,7 @@ itemcase with that item.
 
 To destroy, just destroy the block where the itemcase was placed.
 
-
-Documentation
--------------
+## Documentation
 
 Case data is placed on a file in the world folder.  This is
 loaded during world load and unloaded during unload.
@@ -51,8 +76,7 @@ modify the `config.yml` file:
     settings:
       classic: true
 
-Change the line `classic` from `true` to `false`.  Note that **new
-wave** mode is experimental and has not been fully tested.
+Change the line `classic` from `true` to `false`.
 
 ### Permission Nodes:
 
@@ -61,30 +85,27 @@ wave** mode is experimental and has not been fully tested.
 
 ## Changes
 
+* 1.1.0 : Updated
+  - Added translations
+  - Using libcommon now (2.0.0dev2)
 * 1.0.8 : No AIR cases
   - Do not allow to place cases with AIR only.  Reported by @Pub4Game.
     Closes #30.
-* 1.0.7 : Update for PM1.6dev
   - Checks which function to call (isPlaceable/canBePlaced) without having
     to check version.
-* 1.0.6 : Update for PM1.6dev
   - changed isPlaceable for canBePlaced
-* 1.0.5 : BugFix
-  - Fixed a small bug related to new wave mode.
-* 1.0.4 : new wave vs classic
+* 1.0.5 : one-oh-five
   - Added new wave mode that allows you to place itemcases everywhere.
   - Removed callbacktask deprecation warning
-* 1.0.2 : Bugfix
   - Fixed bugs and improved permissions.
-* 1.0.1 : Bugfix
   - Fixed despawn when chunk unloads
 * 1.0.0 : First release
 
-Copyright
-=========
+<!-- template: license/gpl2.md -->
+# Copyright
 
     ItemCasePE
-    Copyright (C) 2015 Alejandro Liu  
+    Copyright (C) 2015, 2016 Alejandro Liu
     All Rights Reserved.
 
     This program is free software: you can redistribute it and/or modify
@@ -99,3 +120,7 @@ Copyright
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+<!-- end-include -->
+
