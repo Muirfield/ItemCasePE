@@ -2,3 +2,58 @@
 # Commands
 #
 itemcase
+
+@$s = new \specter\api\DummyPlayer('dummy1')
+@$item = \pocketmine\item\Item::get(\pocketmine\item\Item::GOLD_HOE)
+@$mgr = $server->getPluginManager()
+@$s->getPlayer()->setOp(true)
+@$lv = $s->getPlayer()->getLevel()
+@$lv->setBlock($s->getPlayer()->add(3,3,3),new \pocketmine\block\Glass(), true,true)
+@$s->getPlayer()->getInventory()->setItem(0,clone $item)
+@$s->getPlayer()->getInventory()->setHeldItemSlot(0)
+
+echo Item: '.$item->getId().' slot '.$s->getPlayer()->getInventory()->getHeldItemSlot().'
+echo placing1 '.$s->getPlayer()->getInventory()->getItemInHand()->getId().'
+
+@\mf\common\Cmd::execAs($s->getPlayer(),'itemcase')
+@\mf\common\Cmd::execAs($s->getPlayer(),'itemcase cancel')
+@\mf\common\Cmd::execAs($s->getPlayer(),'itemcase reset')
+@\mf\common\Cmd::execAs($s->getPlayer(),'itemcase list')
+
+@\mf\common\Cmd::execAs($s->getPlayer(),'itemcase add')
+
+@$block = $lv->getBlock($s->getPlayer()->add(3,3,3))
+@$face = \pocketmine\math\Vector3::SIDE_UP
+@$ev = new \pocketmine\event\player\PlayerInteractEvent($s->getPlayer(), $s->getPlayer()->getInventory()->getItemInHand(), $block, $face)
+@$mgr->callEvent($ev)
+
+@$ev = new \pocketmine\event\player\PlayerInteractEvent($s->getPlayer(), $s->getPlayer()->getInventory()->getItemInHand(), $block, $face)
+@$mgr->callEvent($ev)
+
+itemcase respawn
+
+@$x = new \specter\api\DummyPlayer('dummy2')
+@$x->getPlayer()->setOp(false)
+
+@$ev = new \pocketmine\event\block\BlockBreakEvent($x->getPlayer(), $block, $x->getPlayer()->getInventory()->getItemInHand(), true)
+@$mgr->callEvent($ev)
+
+@$x->close()
+
+@$ev = new \pocketmine\event\block\BlockBreakEvent($s->getPlayer(), $block, $s->getPlayer()->getInventory()->getItemInHand(), true)
+@$mgr->callEvent($ev)
+
+
+@$s->close()
+
+
+
+
+
+
+
+# player interact
+# place block
+# block break
+
+
