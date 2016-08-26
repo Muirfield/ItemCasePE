@@ -19,8 +19,7 @@
 
 <!-- php: $v_forum_thread = "https://forums.pocketmine.net/threads/itemcasepe.8059/"; -->
 <!-- php: $copyright="2015, 2016"; -->
-<!-- template: old/prologue.md -->
-
+<!-- template: prologue.md -->
 **DO NOT POST QUESTIONS/BUG-REPORTS/REQUESTS IN THE REVIEWS**
 
 It is difficult to carry a conversation in the reviews.  If you
@@ -28,15 +27,31 @@ have a question/bug-report/request please use the
 [Thread](https://forums.pocketmine.net/threads/itemcasepe.8059/) for
 that.  You are more likely to get a response and help that way.
 
-_NOTE:_
-
-This documentation was last updated for version **1.1.0**.
+_NOTE:_ This documentation was last updated for version **1.1.0**.
 
 Please go to
 [github](http://github.com/Muirfield/ItemCasePE)
 for the most up-to-date documentation.
 
-You can also download this plugin from this [page](https://github.com/Muirfield/pocketmine-plugins/releases/tag/ItemCasePE-1.1.0).
+You can also download this plugin from this [page](http://github.com/Muirfield/ItemCasePE/releases).
+Usually there are two types of releases, a _normal_ release (no suffix) and a _lite_
+release with the suffix `-lite`.  The _lite_ release has a dependancy on 
+the [libcommon](https://github.com/Muirfield/libcommon/releases) plugin, where as
+the _normal_ release does not.  You only need to download **one**.
+
+
+When clonning this repository make sure you use the `--recursive` option:
+
+    git clone --recursive http://github.com/Muirfield/ItemCasePE.git
+    
+Otherwise you need to initialize sub-modules manually:
+
+    git clone http://github.com/Muirfield/ItemCasePE.git
+    cd ItemCasePE
+    git submodule update --init --recursive
+
+
+
 
 
 <!-- end-include -->
