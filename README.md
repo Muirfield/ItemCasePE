@@ -3,6 +3,9 @@
 
 <!-- end-include -->
 <img id="ItemCase-icon.png" src="https://raw.githubusercontent.com/Muirfield/ItemCasePE/master/media/ItemCase-icon.png" style="width:64px;height:64px" width="64" height="64"/>
+<!-- meta: Categories = Economy, General -->
+<!-- php: $v_forum_thread = "https://forums.pocketmine.net/threads/itemcasepe.8059/"; -->
+<!-- php: $copyright="2015, 2016"; -->
 <!-- template: header.md -->
 
 # ItemCasePE
@@ -16,9 +19,6 @@
 
 
 <!-- end-include -->
-
-<!-- php: $v_forum_thread = "https://forums.pocketmine.net/threads/itemcasepe.8059/"; -->
-<!-- php: $copyright="2015, 2016"; -->
 <!-- template: prologue.md -->
 **DO NOT POST QUESTIONS/BUG-REPORTS/REQUESTS IN THE REVIEWS**
 
